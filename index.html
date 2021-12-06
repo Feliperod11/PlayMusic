@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praticar</title>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <div id="box_tittle">
+          <h1 id="tittle">PlayMusic</h1>
+        </div>
+
+        <div id="cd_div">
+          <img id="cd" src="./Assets/images/band_cd/1 - arcticmonkeys.jpg"/>
+        </div>
+
+        <div id="music_details">
+          <h1 id="band_name">Arctic Monkeys</h1>
+          <h2 id="music_name">Do I Wanna Know?</h2>
+        </div>
+
+        <div id="progress_bar">
+          <audio id="audio">
+            <source
+              src="./Assets/audio/1 - Arctic Monkeys - Do I Wanna Know.mp3"
+              type="audio/mpeg"
+              id="song"
+            />
+          </audio>
+          <span id="song_live">00:00</span>
+          <input type="range" name="progress" id="progress" onchange="progressBar()" max=""/>
+          <span id="song_duration">00:00</span>
+        </div>
+
+        <div id="controls">
+          <img id="back_music" onclick="back()" src="./Assets/images/back_music.png"/>
+          <img
+            id="back15s"
+            onclick="back15()"
+            src="./Assets/images/back15.png"
+          />
+          <img id="play" onclick="play()" src="./Assets/images/play.png"/>
+          <img id="skip15s" onclick="advanced15()" src="./Assets/images/skip15.png"/>
+          <img id="jump_music" onclick="jump()" src="./Assets/images/jump_music.png"/>
+        </div>
+
+        <div id="sound_div">
+          <img id="img_sound" src="./Assets/images/volumemax.png"/>
+          <input type="range" id="sound" oninput="Volume()"/>
+        </div>
+
+        <div id="created">
+          <h1>Desenvolvido por: Felipe R.</h1>
+        </div>
+      </div>
+    </div>
+
+    <script src="./Assets/js/script.js"></script>
+  </body>
+</html>
